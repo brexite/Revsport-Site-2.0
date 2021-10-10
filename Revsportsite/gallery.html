@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revsport International</title>
+  <link rel="stylesheet" type="text/css" href="assets/mainstyle.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/7366b3c9bf.js" crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <span class="bg blur"></span>
+  <span class="bg"></span>
+  <div class="topnav">
+    <a style="float: left; pointer-events: all;"href="./index.html">
+      <img class="logo" src="./assets/revsport simple logo.png">
+    </a>
+    <i class="dropbtn fas fa-bars fa-3x" onclick="showMenu()"></i>
+  </div>
+  <div id="transition" class="dropdown">
+    <div id="myDropdown" class="dropdown-content">
+      <a href="./index.html">HOME</a>
+      <a href="./team.html">TEAM</a>
+      <a href="./donate.html">DONATE</a>
+      <a href="./gallery.html">GALLERY</a>
+      <div id="myDropdown" class="socials">
+        <a href="https://docs.github.com/en/github/site-policy/github-privacy-statement" target="_blank"><button class="social-btn"><i class="fab fa-github-square"></i></button></a>
+        <a href="https://www.google.com/search?q=google+troll+face" target="_blank"><button class="social-btn"><i class="fab fa-google-plus"></i></button></a>
+        <a href="https://twitter.com/RevsportIntl/" target="_blank"><button class="social-btn"><i class="fab fa-twitter"></i></button></a>
+        <a href="https://www.uber.com/mx/es/" target="_blank"><button class="social-btn"><i class="fab fa-uber"></i></button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="./assets/gallery/1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./assets/gallery/2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./assets/gallery/3.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="./assets/gallery/4.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="./assets/gallery/5.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+  
+</body>
+
+
+
+<script>
+  function showMenu() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("transition").style.top = "0px";
+  }
+
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn') && !event.target.matches('.social-btn') && !event.target.closest('.dropdown')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+      document.getElementById("transition").style.top = "-400px";
+    }
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+
+</html>
