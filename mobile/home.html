@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revsport International</title>
+  <link rel="stylesheet" type="text/css" href="../assets/mobilestyle.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/7366b3c9bf.js" crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <span class="bg blur"></span>
+  <span class="bg"></span>
+  <div class="topnav">
+    <a style="pointer-events: all;"href="./index.html">
+      <img class="logo" src="../assets/revsport simple logo.png">
+    </a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="hero">  
+    <h1 class="hometext">REVVING MY WIFE TONITE</h1>
+    <h2 class="hometext">I've spent 2 weeks on the desktop site, I cannot be arsed to make a proper mobile site too. ~ brexite</h2>
+    <iframe class="discordwidget" src="https://discord.com/widget?id=818451050729177100&theme=dark" style="border-color: transparent; border-image-width: 0;" width="350" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div>
+</body>
+
+
+
+<script>
+  function showMenu() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("transition").style.top = "0px";
+  }
+
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn') && !event.target.matches('.social-btn') && !event.target.closest('.dropdown')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+      document.getElementById("transition").style.top = "-400px";
+    }
+  }
+
+  $(".hometext").animate({
+        opacity: 1,
+    }, { duration: 1200, queue: false });
+  $(".discordwidget").animate({
+        opacity: 1,
+    }, { duration: 1200, queue: false });
+</script>
+
+</html>

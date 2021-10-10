@@ -1,0 +1,107 @@
+* {
+  margin:0;
+  padding:0;
+  z-index: 0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Montserrat";
+  overflow: hidden;
+  background-color: transparent;
+  animation: fadeIn 1s;
+  pointer-events: none;
+  z-index: -3;
+  overflow-y: scroll;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+h1, h2 {
+padding: 100px;
+color: white;
+letter-spacing: 0.1em;
+pointer-events: auto;
+font-size: 40px;
+font-weight: bold;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 100px;
+}
+
+.bg {
+  background: url(./main_bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  min-height: 1000vh;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: -99;
+  filter: sepia(100%) hue-rotate(180deg) brightness(0.6) saturate(200%);
+}
+
+.blur {
+  filter: sepia(100%) hue-rotate(180deg) brightness(0.6) saturate(200%) blur(4px);
+  z-index: -98;
+}
+
+.logo {
+  height: 48px;
+  margin: auto;
+}
+
+.topnav{
+  background-color: #252525;
+  overflow: hidden;
+  display: block;
+}
+
+.topnav img {
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 14px 14px;
+  z-index: auto;
+}
+
+.hero {
+z-index: -10;
+}
+
+.hometext, .discordwidget {
+/* position: absolute; */
+position: relative;
+display: block;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+z-index: -10;
+padding: 14px 14px;
+width: 90%;
+/* top: calc(50% + 63px); */
+/* transform: translateY(-100%); */
+opacity: 0;
+}
+
+.discordwidget {
+padding-top: 50px;
+color-scheme: auto;
+pointer-events: all;
+}
+
+#transition {
+  top: -400px;
+  transition: top 0.5s;
+}
