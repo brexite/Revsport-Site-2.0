@@ -291,8 +291,8 @@ display: block;
 z-index: -10;
 top: calc(50% + 63px);
 transform: translateY(-50%);
-left: -800px;
-opacity: 0;
+left: 50px;
+opacity: 1;
 width: 25%;
 }
 
@@ -302,8 +302,8 @@ display: block;
 z-index: -10;
 top: calc(35% + 63px);
 transform: translateY(-50%);
-left: -800px;
-opacity: 0;
+left: 0px;
+opacity: 1;
 width: 90%;
 pointer-events: none;
 }
@@ -315,7 +315,7 @@ z-index: -10;
 top: calc(65% + 63px);
 transform: translateY(-50%);
 right: -600px;
-opacity: 0;
+opacity: 1;
 width: 90%;
 }
 
@@ -327,8 +327,8 @@ float: right;
 /* top: 280px; */
 top: calc(50% + 63px);
 transform: translateY(-50%);
-right: -500px;
-opacity: 0;
+right: 150px;
+opacity: 1;
 color-scheme: auto;
 pointer-events: all;
 margin: auto;
